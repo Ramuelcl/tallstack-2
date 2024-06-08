@@ -25,16 +25,17 @@ class PaisFactory extends Factory
     public function definition()
     {
         // $paises = fncGlob_Files(asset('storage/flags'), "*", "jpeg");
-        $paises = fncGlob_Files('C:\\laragon\\www\\tallstack\\storage\\app\\public\\flags\\', "*", "jpeg");
+        $dir = 'C:\\laragon\\www\\tallstack\\public\\app\flags\\';
+        $paises = fncGlob_Files($dir, '*', 'jpeg');
         // dd($paises);
 
-        foreach ($paises as  $value) {
+        foreach ($paises as $value) {
             // dump([$value, $value['name']]);
             // dump([asset("storage/flags/" . $value['filename']), $value['name']]);
 
             DB::table($this->table)->insert([
                 'nombre' => str_replace('_', ' ', $value['name']),
-                'bandera' => "/storage/flags/" . $value['name'] . "." . $value['ext'],
+                'bandera' => 'app/flags/' . $value['name'] . '.' . $value['ext'],
                 // 'idioma' => $value['name'],
             ]);
         }

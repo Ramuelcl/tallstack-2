@@ -1,4 +1,8 @@
-# ==== base0.yml ======================================
+# ==== baseBanca.yml ===
+# =Categoria=Perfil=UserSetting=Marcador=
+# =Pais=Ciudad=Direccion=Telefono=
+# =Tabla=Cliente=Vendedor=
+# =Traspaso=Movimiento=
 models:
   backend\Categoria:
     nombre: string:45 nullable default:null unique
@@ -124,6 +128,8 @@ models:
     cliente_id: bigInteger nullable default:null
     releve: bigInteger nullable default:null
     dateReleve: date nullable default_format:"Y-m-d"
+    estado: tinyInteger nullable default:0
+    conciliada: tinyInteger nullable default:0
     indexes:
       - index: cuenta, dateMouvement
     softDeletes: true
