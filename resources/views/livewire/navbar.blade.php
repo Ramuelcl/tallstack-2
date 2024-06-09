@@ -28,7 +28,8 @@
               <li>
                 <a class="{{ $active }} block rounded pl-3 pr-4 hover:underline md:bg-transparent md:p-0"
                    href="{{ route($html) }}"
-                   aria-current="">{{ $menu }}</a>
+                   aria-current="{{ $html }}"
+                   wire:navigate>{{ $menu }}</a>
               </li>
             @endforeach
           </ul>
@@ -149,7 +150,8 @@
             @endphp
             <a class="{{ $active }} block rounded bg-blue-700 py-2 pl-3 pr-4 text-gray-50 hover:underline dark:text-gray-50 md:bg-transparent md:p-0 md:text-blue-700"
                href="{{ route($html) }}"
-               aria-current="">{{ $menu }}</a>
+               aria-current=""
+               wire:navigate>{{ $menu }}</a>
           </li>
         @endforeach
       </ul>

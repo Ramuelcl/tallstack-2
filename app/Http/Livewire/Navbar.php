@@ -7,14 +7,14 @@ use Livewire\Component;
 class Navbar extends Component
 {
     public $menus = [
-        'Dashboard' => 'pages.index',
+        'Dashboard' => 'pages.dashboard',
         'Welcome' => 'pages.welcome',
-        'Users' => 'users.usersIndex',
-        'Roles' => 'users.rolesIndex',
-        'Permissions' => 'users.permissionsIndex',
-        'About' => 'pages.about',
-        'Contact' => 'pages.contact',
-        'Master' => 'pages.master',
+        'Users' => 'dashboard.users',
+        // 'Roles' => 'dashboard.rolesIndex',
+        // 'Permissions' => 'dashboard.permissionsIndex',
+        // 'About' => 'pages.about',
+        // 'Contact' => 'pages.contact',
+        // 'Master' => 'pages.master',
     ];
 
     public function render()

@@ -7,9 +7,9 @@ use Illuminate\Support\Facades\{App, Artisan, File, Route};
 
 class PagesController extends Controller
 {
-    public function index()
+    public function dashboard()
     {
-        return view('pages.home');
+        return view('pages.dashboard');
     }
 
     public function about()

@@ -66,27 +66,20 @@ class UserFactory extends Factory
         //     $format = 'png'
         // );
 
-        $avatar1 = $this->faker->imageUrl(
-            $width = 640,
-            $height = 480,
-            $category = getIniciales($prename . ' ' . $name),
-            $randomize = false,
-            $word = null,
-            $gray = true
-        );
+        $avatar1 = $this->faker->imageUrl($width = 640, $height = 480, $category = getIniciales($prename . ' ' . $name), $randomize = false, $word = null, $gray = true);
 
         // dump($avatar1);
         //
         // TODO: registrar foto en directorio, no se queda, se borra sola inmediatamente
         return [
-            'name' => $name . " " . $prename,
+            'name' => $name . ' ' . $prename,
             // 'prename' => $prename,
             'email' => $email . '@' . $this->faker->freeEmailDomain(),
             'email_verified_at' => now(),
             'profile_photo_path' => $avatar1,
             'is_active' => $this->faker->boolean(80),
             // 'password' => Hash::make('password'),
-            'password' => 'password',
+            'password' => 'password', // model/user.php mutator: setPasswordAttribute()
             'remember_token' => Str::random(10),
         ];
     }
@@ -117,11 +110,10 @@ class UserFactory extends Factory
         }
 
         return $this->has(
-            Team::factory()
-                ->state(function (array $attributes, User $user) {
-                    return ['name' => $user->name . '\'s Team', 'user_id' => $user->id, 'personal_team' => true];
-                }),
-            'ownedTeams'
+            Team::factory()->state(function (array $attributes, User $user) {
+                return ['name' => $user->name . '\'s Team', 'user_id' => $user->id, 'personal_team' => true];
+            }),
+            'ownedTeams',
         );
     }
 }

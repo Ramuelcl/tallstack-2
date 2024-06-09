@@ -1,4 +1,6 @@
+<!-- resources/views/livewire/layout.blade.php -->
 <!DOCTYPE html>
+<!-- resources/views/components/layout.blade.php -->
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
@@ -8,7 +10,7 @@
   <meta name="description"
         content="">
   <meta name="author"
-        content="">
+        content="Ramuel Gonzalez">
   <!-- CSRF Token -->
   <meta name="csrf-token"
         content="{{ csrf_token() }}">
@@ -34,6 +36,7 @@
     <!-- pl-8 md:pl-16 lg:pl-32 xl:pl-64 -->
 
     <main class="bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-50">
+
       @include('layouts.partials.header')
       {{ $slot ?? null }}
       @include('layouts.partials.footer')

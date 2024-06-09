@@ -47,7 +47,6 @@ class DatabaseSeeder extends Seeder
         // dd(public_path(), storage_path(), public_path("storage"), storage_path('storage'), env('APP_URL').'/public/storage', $folders, $folder);
 
         $this->call([
-
             TablaSeeder::class,
             //
             RoleSeeder::class,
@@ -58,6 +57,7 @@ class DatabaseSeeder extends Seeder
             DireccionSeeder::class,
             CategoriaSeeder::class,
             MarcadorSeeder::class,
+            TaskSeeder::class,
             //
             // BancaSeeder::class,
             // CompteSeeder::class,

@@ -1,6 +1,7 @@
 <?php
 
 return [
-    'logoNombre' => 'Guz@net',
+    'autor' => 'Ramuel González',
+    'logoNombre' => 'aplic@cionet',
     'logoImagen' => '/app/logo/guzanet.png',
 ];
