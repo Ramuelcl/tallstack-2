@@ -1,5 +1,5 @@
 <?php
-// routes/dashboard.php
+// routes/dashboardWeb.php
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Livewire\dashboard\Users;

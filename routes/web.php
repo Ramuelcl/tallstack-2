@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\cargaliveController;
-
+//
 use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace' => 'App\Http\Controllers'], function () {
@@ -20,5 +20,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
     // Route::get('/readStorage', 'readStorage')->name('readStorage');
 });
 
-require __DIR__ . '/dashboard.php';
 require __DIR__ . '/auth.php';
+require __DIR__ . '/dashboardWeb.php';
+require __DIR__ . '/tasksWeb.php';

@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
-    public $table = 'task';
+    public $table = 'tasks';
     /**
      * Run the migrations.
      */

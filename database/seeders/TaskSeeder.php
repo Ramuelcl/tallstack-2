@@ -1,10 +1,11 @@
 <?php
+// database/seeders/TaskSeeder.php
 
 namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use app\models\Task;
+use App\Models\backend\Task; // Importa el modelo Task
 
 class TaskSeeder extends Seeder
 {
@@ -13,13 +14,10 @@ class TaskSeeder extends Seeder
      */
     public function run(): void
     {
-        $task = [
-            ['user_id' => 1, 'name' => 'Task uno'],
-            ['user_id' => 1, 'name' => 'Task dos'],
-            ['user_id' => 2, 'name' => 'Task tres'],
-        ];
+        $tasks = [['user_id' => 1, 'name' => 'Task uno'], ['user_id' => 1, 'name' => 'Task dos'], ['user_id' => 2, 'name' => 'Task tres']];
 
-        foreach ($tasks as $key => $task) {
-          Task::insert();        }
+        foreach ($tasks as $task) {
+            Task::create($task); // Usa Eloquent para crear las tareas
         }
+    }
 }

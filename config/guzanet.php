@@ -2,6 +2,6 @@
 
 return [
     'autor' => 'Ramuel González',
-    'logoNombre' => 'aplic@cionet',
+    'logoNombre' => 'aplic@cio.net',
     'logoImagen' => '/app/logo/guzanet.png',
 ];
