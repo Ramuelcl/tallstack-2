@@ -1,9 +1,11 @@
 <!-- resources/views/layouts/partials/footer.blade.php -->
 <footer
         class="h-6 bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-50 md:flex md:items-center md:justify-between md:px-6">
-  <span class="text-sm sm:text-center">&copy; {{ date('Y') }} &middot; <a class="hover:underline"
-       href="mailto:ramuelcl@gmail.com">{{ __(' Created by ') }}</a>
-    {{ config('guzanet.autor', 'falta el autor en config/guzanet.php') }}
+  <span class="text-sm sm:text-center">&copy; {{ date('Y') }} &middot;
+    <a class="hover:underline"
+       href="mailto:{{ config('guzanet.email') }}">{{ __(' Created by ') }}{{ config('guzanet.autor', 'falta el autor en config/guzanet.php') }}
+    </a>
+
   </span>
   <ul class="flex flex-wrap items-center text-sm sm:mt-0">
     <li>

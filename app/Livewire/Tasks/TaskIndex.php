@@ -24,7 +24,8 @@ class TaskIndex extends Component
             ->with(['button' => 'Nuevo']);
     }
 
-    public function add()
+    public function save()
     {
+        dd($this->name);
     }
 }
